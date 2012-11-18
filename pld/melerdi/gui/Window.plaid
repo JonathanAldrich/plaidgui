@@ -1,0 +1,5 @@
+package melerdi.gui;
+
+state Window
+{
+}
