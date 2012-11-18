@@ -1,0 +1,10 @@
+package melerdi.gui;
+
+state WindowState
+{
+	method setupPeer()
+	{
+		this <- UndisplyableWindow;
+		java.lang.System.out.println("making a window");	
+	}
+}

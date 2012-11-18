@@ -1,0 +1,16 @@
+package melerdi.gui.container;
+
+import javax.swing.*;
+import java.lang.*;
+import java.awt.*;
+
+state Window
+{
+}
+	 
+
+  
+
+
+
+

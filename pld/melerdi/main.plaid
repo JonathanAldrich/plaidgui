@@ -1,6 +1,48 @@
 package melerdi;
 
-method main()
-{
-    printLine("Hello, world!");
+import melerdi.gui.*;
+import melerdi.gui.container.*;
+
+method main() {
+	java.lang.System.out.println("test1");
+	val w = makeWindow("hi");
+       
+    w.pack();
+    w.show();
+	match (w) {
+		case VisibleWindow {
+			printLine("VisibleWindow;!");
+		}
+		case DeiconofiedWindow {
+			printLine("DeiconofiedWindow!");
+		}
+		case HiddenWindow {
+			printLine("HiddenWindow");
+		}
+		case UndisplyableWindow {
+			printLine("UndisplyableWindow");
+		}
+		case NewWindow {
+			printLine("WindowState");
+		}
+	};
+   //	w.show();
+   	match (w) {
+		case HiddenWindow {
+			printLine("HiddenWindow");
+		}
+		case ActivateWindow {
+			printLine("ActivateWindow!");
+		}
+		case DeiconofiedWindow {
+			printLine("DeiconofiedWindow!");
+		}	
+	    case UndisplyableWindow {
+			printLine("UndisplyableWindow");
+		}
+		
+	};
+
+   	java.lang.System.out.println("test11");
+
 }

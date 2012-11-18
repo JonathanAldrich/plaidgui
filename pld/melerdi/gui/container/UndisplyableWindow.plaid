@@ -1,0 +1,23 @@
+package melerdi.gui.container;
+
+state UndisplyableWindow case of NewWindow
+{
+	var bool;
+	method pack()
+	{
+		this.peer.pack();
+		this <- HiddenWindow;
+	}
+	method show()
+	{
+		this.peer.pack();
+		this.peer.setVisible(true);
+		this <- VisibleWindow;
+		this <- ActivateWindow;
+		this <- DeiconofiedWindow;
+	} 
+	method decorate(bool)
+	{
+		this.peer.setUndecorated(bool);
+	}   
+}

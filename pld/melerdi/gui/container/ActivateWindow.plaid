@@ -1,0 +1,5 @@
+package melerdi.gui.container;
+
+state ActivateWindow case of Activating
+{
+}
