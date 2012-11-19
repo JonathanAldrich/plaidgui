@@ -1,4 +1,4 @@
-package melerdi.gui.container;
+package melerdi.gui.container.window;
 	
 state IconofiedWindow case of Iconofying
 {

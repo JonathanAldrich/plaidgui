@@ -1,4 +1,4 @@
-package melerdi.gui.container;
+package melerdi.gui.container.window;
 
 import javax.swing.*;
 import java.lang.*;

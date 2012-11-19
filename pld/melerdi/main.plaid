@@ -1,12 +1,14 @@
 package melerdi;
 
+import melerdi.*;
 import melerdi.gui.*;
-import melerdi.gui.container.*;
+import melerdi.gui.container.window.*;
 
 method main() {
 	java.lang.System.out.println("test1");
-	val w = makeWindow("hi");
-       
+
+  
+ val w = makeWindow("hi");
     w.pack();
     w.show();
 	match (w) {

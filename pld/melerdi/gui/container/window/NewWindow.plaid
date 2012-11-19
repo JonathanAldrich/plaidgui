@@ -1,0 +1,8 @@
+package melerdi.gui.container.window;
+
+state NewWindow
+{
+	val name;
+	val peer;
+}
+ 
