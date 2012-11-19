@@ -15,6 +15,8 @@ state UndisplyableWindow case of NewWindow
 		this <- VisibleWindow;
 		this <- ActivateWindow;
 		this <- DeiconofiedWindow;
+		this <- packedWindow;
+		this <- DefaultPosition;
 	} 
 	method decorate(bool)
 	{
