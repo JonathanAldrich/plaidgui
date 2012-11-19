@@ -6,7 +6,6 @@ state HiddenWindow case of DisplaybleWindow
     {
 		this.peer.pack();
 		this.peer.setVisible(true);	  
-		this.peer.setSize(300,400);
 		//changing in or-stats is normal but from one state to 
 		//orthogonal state there is a problem if you change the 
 		//state to parent hierarchy it works else the hierarchy error will happen 
@@ -14,6 +13,8 @@ state HiddenWindow case of DisplaybleWindow
 		this <- VisibleWindow;
 		this <- ActivateWindow;
 		this <- DeiconofiedWindow;
+		this <- PackedWindow;
+		this <- DefaultPosition;
 		java.lang.System.out.println("the window is shown!!!");
 	}
 }

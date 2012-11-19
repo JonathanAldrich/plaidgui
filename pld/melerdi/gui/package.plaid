@@ -4,7 +4,7 @@ import melerdi.gui.container.window.*;
 
 method makeWindow(name)
 {  
-	val win = new NewWindow
+	val win = new Window
 	{
 		name = name; 
 	}

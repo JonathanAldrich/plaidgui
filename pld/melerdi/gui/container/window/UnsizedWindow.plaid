@@ -6,8 +6,6 @@
 */
 package melerdi.gui.container.window;
 
-state Sizing 
+state UnsizedWindow case of Sizing
 {
-	val width;
-	val height;
 }
