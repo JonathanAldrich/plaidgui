@@ -1,0 +1,22 @@
+package melerdi.gui;
+
+import melerdi.gui.container.window.*;
+
+method makeWindow(name)
+{  
+	val win = new NewWindow
+	{
+		name = name; 
+	}
+	with WindowState 
+	{
+			peer = javax.swing.JFrame.new(name);
+	};
+
+	win.setupPeer();
+	win;
+}
+method notifyClose() {
+	java.lang.System.exit(0);
+}
+

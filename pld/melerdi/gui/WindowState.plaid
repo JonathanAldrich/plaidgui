@@ -1,0 +1,9 @@
+package melerdi.gui;
+
+state WindowState
+{
+	method setupPeer()
+	{
+		this <- UndisplyableWindow;
+	}
+}
