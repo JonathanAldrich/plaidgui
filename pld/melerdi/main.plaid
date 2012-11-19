@@ -13,8 +13,8 @@ method main() {
     w.show();
   //printLine(w);
   
-  w.setSize(400,500);
-	w.setSize(700,200);
+   w.setSize(400,500);
+	w.pack();
 	match (w) {
 		case WindowState {
 			printLine("VisibleWindow;!");
