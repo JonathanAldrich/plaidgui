@@ -6,6 +6,6 @@
 */
 package melerdi.gui.container.window;
 
-state sizing case of BoundedWindow
+state Sizing 
 {
 }
