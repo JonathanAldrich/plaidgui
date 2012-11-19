@@ -8,4 +8,9 @@ package melerdi.gui.container.window;
 
 state PackedWindow case of Sizing
 {
+	method setSize(width,height)
+	{
+	this.peer.setSize(width,height);
+	this<-SizedWindow;	
+	}
 }

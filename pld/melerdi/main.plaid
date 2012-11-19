@@ -7,10 +7,14 @@ import melerdi.gui.container.window.*;
 method main() {
 	java.lang.System.out.println("test1");
 //	plaidgui.auxiliary.helper.prinkon();
-  
+
  val w = makeWindow("hi");
     w.pack();
     w.show();
+  //printLine(w);
+  
+  w.setSize(400,500);
+	w.setSize(700,200);
 	match (w) {
 		case WindowState {
 			printLine("VisibleWindow;!");
