@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.lang.*;
 import java.awt.*;
 
-state Window
-{
-}
+state Window = 
+	NewWindow with BoundedWindow
+
 	 
 
   

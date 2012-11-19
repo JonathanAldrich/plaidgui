@@ -4,8 +4,8 @@
    	DESC:	
 	FILE:	
 */
-
 package melerdi.gui.container.window;
 
-state BoundedWindow =
-	Positioning with Sizing
+state Positioning
+{
+}

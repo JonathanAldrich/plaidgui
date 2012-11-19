@@ -6,7 +6,7 @@ import melerdi.gui.container.window.*;
 
 method main() {
 	java.lang.System.out.println("test1");
-
+//	plaidgui.auxiliary.helper.prinkon();
   
  val w = makeWindow("hi");
     w.pack();

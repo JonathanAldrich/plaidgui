@@ -4,6 +4,9 @@ state WindowState
 {
 	method setupPeer()
 	{
+		this.peer.addWindowListener(
+		plaidgui.auxiliary.WindowListener.new(fn() => notifyClose()));
 		this <- UndisplyableWindow;
+	
 	}
 }
