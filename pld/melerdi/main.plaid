@@ -12,7 +12,7 @@ method main() {
     w.pack();
     w.show();
 	match (w) {
-		case VisibleWindow {
+		case WindowState {
 			printLine("VisibleWindow;!");
 		}
 		case DeiconofiedWindow {
@@ -42,7 +42,6 @@ method main() {
 	    case UndisplyableWindow {
 			printLine("UndisplyableWindow");
 		}
-		
 	};
 
    	java.lang.System.out.println("test11");
