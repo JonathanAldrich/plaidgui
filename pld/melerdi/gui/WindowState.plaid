@@ -9,5 +9,6 @@ state WindowState
 		this <- UndisplyableWindow;
 		this <- UnsizedWindow;
 		this <- UnpositionedWindow;
+		this <- EnabledWindow;
 	}
 }
