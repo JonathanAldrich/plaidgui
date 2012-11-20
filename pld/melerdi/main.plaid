@@ -13,6 +13,20 @@ method main() {
     w.show();
     w.setSize(200,400);
     w.disable();
+    
+    match (w) {
+		case DisabledWindow {
+			printLine(" window is in DisabledWindow state;!");
+		}
+		};
+		w.enable();
+	match (w) {
+		case EnabledWindow {
+			printLine(" window is in EnabledWindow state;!");
+		}
+		};	
+	val p = makePanel();	
+		
   //printLine(w);
   /*
    w.setSize(400,500);

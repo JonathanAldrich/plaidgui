@@ -6,8 +6,6 @@
 */
 package melerdi.gui.container.window;
 
-//import javax.swing.*;
-
 state EnabledWindow case of Enabling
 {
 	method disable()
