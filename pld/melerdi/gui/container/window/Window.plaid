@@ -6,6 +6,12 @@ import java.awt.*;
 
 state Window = 
 	NewWindow with BoundedWindow with Enabling
+{
+	method setParent(p)
+	{
+	this.peer.add(p.getPeer());
+	}
+}
 
 	 
 

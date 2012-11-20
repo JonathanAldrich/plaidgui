@@ -10,5 +10,6 @@ package melerdi.gui.container.panel;
 state Panel
 {
 val peer;
+method getPeer() { this.peer }
 }
  

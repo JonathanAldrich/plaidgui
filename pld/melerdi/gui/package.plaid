@@ -1,7 +1,7 @@
 package melerdi.gui;
 
 import melerdi.gui.container.window.*;
-
+import melerdi.gui.container.panel.*;
 method makeWindow(name)
 {  
 	val win = new Window
@@ -16,7 +16,7 @@ method notifyClose() {
 	java.lang.System.exit(0);
 }
 
-method makepanel() 
+method makePanel() 
 {
 new Panel { peer = javax.swing.JPanel.new();}
 }
