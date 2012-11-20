@@ -26,7 +26,7 @@ method main() {
 		}
 		};	
 	val p = makePanel();	
-		
+	w.setParent(p);	
   //printLine(w);
   /*
    w.setSize(400,500);
