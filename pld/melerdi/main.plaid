@@ -11,11 +11,12 @@ method main() {
  val w = makeWindow("hi");
     w.pack();
     w.show();
+    w.setSize(200,400);
+    w.disable();
   //printLine(w);
-  
+  /*
    w.setSize(400,500);
-	w.pack();
-	match (w) {
+		match (w) {
 		case WindowState {
 			printLine("VisibleWindow;!");
 		}
@@ -47,7 +48,7 @@ method main() {
 			printLine("UndisplyableWindow");
 		}
 	};
-
-   	java.lang.System.out.println("test11");
+*/
+   	java.lang.System.out.println("finish test");
 
 }
