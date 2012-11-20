@@ -7,11 +7,7 @@ method makeWindow(name)
 	val win = new Window
 	{
 		name = name; 
-	}
-	with WindowState 
-	{
-			peer = javax.swing.JFrame.new(name);
-	};
+	}with WindowState {peer = javax.swing.JFrame.new(name);};
 
 	win.setupPeer();
 	win;
@@ -20,3 +16,7 @@ method notifyClose() {
 	java.lang.System.exit(0);
 }
 
+method makepanel() 
+{
+new Panel { peer = javax.swing.JPanel.new();}
+}
