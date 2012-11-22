@@ -9,8 +9,22 @@ state Window =
 {
 	method setParent(p)
 	{
-	this.peer.add(p.getPeer());
+		this.peer.add(p.getPeer());
+    	p.changeState();
+    }
+	method layout()
+	{
+		//val manager = java.awt.FlowLayout.new();
+        java.lang.System.out.println(FlowLayout.new());
+        java.lang.System.out.println("testing layout manager" );
+        this.peer.setLayout(FlowLayout.new());
 	}
+	method refresh()
+	{
+		java.lang.System.out.println("refresh the frame" );
+		this.peer.validate();
+	}
+	   
 }
 
 	 
