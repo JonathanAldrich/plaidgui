@@ -1,0 +1,21 @@
+package melerdi.gui.container.window;
+ import java.lang.*;
+state HiddenWindow case of DisplaybleWindow
+{
+    method show()
+    {
+		this.peer.pack();
+		this.peer.setVisible(true);	  
+		//changing in or-stats is normal but from one state to 
+		//orthogonal state there is a problem if you change the 
+		//state to parent hierarchy it works else the hierarchy error will happen 
+        
+		this <- VisibleWindow;
+		this <- ActivateWindow;
+		this <- DeiconofiedWindow;
+		this <- PackedWindow;
+		this <- DefaultPosition;
+		java.lang.System.out.println(peer);
+		java.lang.System.out.println("the window is shown!!!");
+	}
+}

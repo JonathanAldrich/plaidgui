@@ -1,0 +1,22 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.container.panel;
+
+state UnparentedPane case of Parenting
+{
+	method changeState()
+	{
+	this <-ParentedPane;
+	}
+method getPeer() 
+	{ 
+		this.peer 
+	}
+}
+
+ 

@@ -1,0 +1,19 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.container.window;
+
+import javax.swing.*;
+
+state DisabledWindow case of Enabling
+{
+	method enable()
+	{
+		this.peer.setEnabled(true);
+		this <- EnabledWindow;
+	}
+}

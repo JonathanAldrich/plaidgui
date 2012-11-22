@@ -1,0 +1,14 @@
+package melerdi.gui.container.window;
+	
+state VisibleWindow case of DisplaybleWindow = 
+	Activating with Iconofying
+{
+ 	 
+	method hide()
+	{
+		this.peer.setVisible(false);
+		this <- HiddenWindow;
+		java.lang.System.out.println("the window is HIDE!!!");
+	}
+}
+ 
