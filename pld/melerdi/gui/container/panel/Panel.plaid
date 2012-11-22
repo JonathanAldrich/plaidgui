@@ -7,9 +7,15 @@
 
 package melerdi.gui.container.panel;
 
-state Panel
+state Panel = 
+	PaneVisibility with Parenting
 {
-val peer;
-method getPeer() { this.peer }
-}
- 
+	val peer;
+	
+	method setpanel()
+	{
+        printLine(" this s the panel");
+		this <- UnparentedPane;
+		this <- VisiblePane;
+	}
+} 

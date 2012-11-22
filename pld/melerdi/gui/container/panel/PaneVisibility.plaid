@@ -7,5 +7,5 @@
 
 package melerdi.gui.container.panel;
 
-state PaneVisibility case of Panel{}
+state PaneVisibility {}
  

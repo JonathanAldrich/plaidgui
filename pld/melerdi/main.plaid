@@ -9,11 +9,12 @@ method main() {
 //	plaidgui.auxiliary.helper.prinkon();
 
  val w = makeWindow("hi");
+ val w1 = makeWindow("hihihihi");
+    
     w.pack();
     w.show();
-    w.setSize(200,400);
+    w.setSize(400,200);
     w.disable();
-    
     match (w) {
 		case DisabledWindow {
 			printLine(" window is in DisabledWindow state;!");
@@ -25,11 +26,17 @@ method main() {
 			printLine(" window is in EnabledWindow state;!");
 		}
 		};	
-	val p = makePanel();	
+	val p = makePanel("button1");	
 	w.setParent(p);	
+	val p1 = makePanel("button2");
+	w.setParent(p1);
+	w.refresh();
+	printLine("what is the statuse of panel please explain about????");
+	printLine(p1);
+    p1.hidepanel();
   //printLine(w);
   /*
-   w.setSize(400,500);
+   w.setSize(400,200);
 		match (w) {
 		case WindowState {
 			printLine("VisibleWindow;!");
