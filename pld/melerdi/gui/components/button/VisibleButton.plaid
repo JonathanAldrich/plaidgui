@@ -1,0 +1,15 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.components.button;
+
+state VisibleButton case of ButonVisibility{
+method hide(){
+this.peer.setVisible(false);
+this <- InvisibleButton;
+}
+}
