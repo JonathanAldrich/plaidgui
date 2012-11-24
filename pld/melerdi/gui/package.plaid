@@ -2,6 +2,7 @@ package melerdi.gui;
 
 import melerdi.gui.container.window.*;
 import melerdi.gui.container.panel.*;
+import melerdi.gui.components.button.*;
 method makeWindow(name)
 {  
 	val win = new Window
@@ -16,10 +17,21 @@ method notifyClose() {
 	java.lang.System.exit(0);
 }
 
-method makePanel(name) 
+method makePanel() 
 {
 val p= new Panel { peer = javax.swing.JPanel.new();} with WindowState{
 };
 p.setpanel();
 p;
+}
+method makeButton(name) 
+{
+val b= new Button { peer = javax.swing.JButton.new(name);} with ButtonAction{
+};
+b.setButton();
+b.setAction();
+b;
+}
+method buttonAction() {
+	java.lang.System.Out.println(" kar kard ");
 }
