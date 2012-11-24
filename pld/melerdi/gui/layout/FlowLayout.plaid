@@ -1,0 +1,15 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.layout;
+
+state FlowLayout case of Layout = ShiftBorder with ShiftGrid
+{
+	method test(){
+		printLine("this is flow layout");
+	}
+}

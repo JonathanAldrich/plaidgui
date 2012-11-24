@@ -1,0 +1,27 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+
+package melerdi.gui.layout;
+
+import javax.swing.*;
+import java.lang.*;
+import java.awt.*;
+
+state Layout
+{
+	method layout()
+	{
+		//val manager = java.awt.FlowLayout.new();
+       // java.lang.System.out.println(FlowLayout.new());
+        java.lang.System.out.println("testing layout manager" );
+       
+      // (peer.getPeer()).peer.setLayout(FlowLayout.new());
+         this.peer.setLayout(java.awt.FlowLayout.new());
+         this <-FlowLayout;
+         	}
+}
