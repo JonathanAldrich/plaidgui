@@ -5,12 +5,11 @@
 	FILE:	
 */
 
-package melerdi.gui.container.panel;
+package melerdi.gui.components.button;
 
-state VisiblePane case of PaneVisibility{
+state VisibleButton case of ButtonVisibility{
 method hide(){
 this.peer.setVisible(false);
-this <- InvisiblePane;
+this <- InvisibleButton;
 }
 }
- 

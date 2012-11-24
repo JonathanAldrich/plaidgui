@@ -5,13 +5,13 @@
 	FILE:	
 */
 
-package melerdi.gui.container.panel;
+package melerdi.gui.components.button;
 
-state UnparentedPane case of PaneParenting
+state UnparentedButton case of ButtonParenting
 {
 	method changeState()
 	{
-	this <-ParentedPane;
+	this <-ParentedButton;
 	}
 method getPeer() 
 	{ 

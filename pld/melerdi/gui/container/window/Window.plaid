@@ -17,7 +17,7 @@ state Window =
 		//val manager = java.awt.FlowLayout.new();
         java.lang.System.out.println(FlowLayout.new());
         java.lang.System.out.println("testing layout manager" );
-        this.peer.setLayout(FlowLayout.new());
+        this.peer.setLayout(BorderLayout.new());
 	}
 	method refresh()
 	{

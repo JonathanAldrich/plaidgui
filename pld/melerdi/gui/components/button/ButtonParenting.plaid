@@ -5,7 +5,7 @@
 	FILE:	
 */
 
-package melerdi.gui.container.panel;
+package melerdi.gui.components.button;
 
-state ParentedPane case of PaneParenting{}
+state ButtonParenting {}
  
