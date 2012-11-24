@@ -7,7 +7,7 @@
 
 package melerdi.gui.container.panel;
 
-state UnparentedPane case of Parenting
+state UnparentedPane case of PaneParenting
 {
 	method changeState()
 	{

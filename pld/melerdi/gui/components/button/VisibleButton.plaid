@@ -7,7 +7,7 @@
 
 package melerdi.gui.components.button;
 
-state VisibleButton case of ButonVisibility{
+state VisibleButton case of ButtonVisibility{
 method hide(){
 this.peer.setVisible(false);
 this <- InvisibleButton;

@@ -8,7 +8,7 @@
 package melerdi.gui.container.panel;
 
 state VisiblePane case of PaneVisibility{
-method hidepanel(){
+method hide(){
 this.peer.setVisible(false);
 this <- InvisiblePane;
 }
