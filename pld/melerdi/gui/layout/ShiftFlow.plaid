@@ -7,4 +7,22 @@
 
 package melerdi.gui.layout;
 
-state ShiftFlow {}
+state ShiftFlow 
+{
+	val a;
+			/*
+		Constructs a new FlowLayout with a centered alignment and a default 5-unit horizontal and vertical gap.
+	*/
+	method flowLayout(a)
+	{
+		printLine(a);
+		if (a=="LEFT") 
+		{
+			printLine("the condtio is ok");
+			printLine(a);
+		};
+		this.peer.setLayout(java.awt.FlowLayout.new());
+		this <-FlowLayout;
+	}
+		
+}

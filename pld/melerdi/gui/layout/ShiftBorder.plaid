@@ -7,4 +7,11 @@
 
 package melerdi.gui.layout;
 
-state ShiftBorder{}
+state ShiftBorder
+{
+	method borderLayout()
+	{
+		this.peer.setLayout(java.awt.BorderLayout.new());
+		this <-BorderLayout;
+	}
+}

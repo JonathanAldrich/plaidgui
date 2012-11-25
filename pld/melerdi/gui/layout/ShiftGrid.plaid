@@ -7,4 +7,11 @@
 
 package melerdi.gui.layout;
 
-state ShiftGrid{}
+state ShiftGrid
+{
+	method gridLayout()
+	{
+		this.peer.setLayout(java.awt.GridLayout.new());
+		this <-GridLayout;
+	}
+}

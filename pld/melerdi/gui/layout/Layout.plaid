@@ -7,6 +7,9 @@
 
 
 package melerdi.gui.layout;
+import melerdi.gui.container.window.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.components.button.*;
 
 import javax.swing.*;
 import java.lang.*;
@@ -14,14 +17,20 @@ import java.awt.*;
 
 state Layout
 {
-	method layout()
+	method defaultLayout()
 	{
-		//val manager = java.awt.FlowLayout.new();
-       // java.lang.System.out.println(FlowLayout.new());
-        java.lang.System.out.println("testing layout manager" );
-       
-      // (peer.getPeer()).peer.setLayout(FlowLayout.new());
-         this.peer.setLayout(java.awt.FlowLayout.new());
-         this <-FlowLayout;
-         	}
+		match (this) 
+		{
+			case Window 
+			{
+				this.peer.setLayout(java.awt.BorderLayout.new());
+				this <-BorderLayout;
+			}
+			case Panel 
+			{
+				this.peer.setLayout(java.awt.FlowLayout.new());
+				this <-FlowLayout;
+			}
+		};
+	}
 }

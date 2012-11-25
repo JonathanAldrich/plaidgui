@@ -14,8 +14,7 @@ method makeWindow(name)
 	{
 		peer = javax.swing.JFrame.new(name);
 	} with Layout;
-	
-    win.layout();
+	win.defaultLayout();
 	win.setupPeer();
 	win;
    }
@@ -27,8 +26,12 @@ method notifyClose()
 
 method makePanel() 
 {
-	val p= new Panel { peer = javax.swing.JPanel.new();};
+	val p= new Panel 
+	{ 
+		peer = javax.swing.JPanel.new();
+	}with Layout;
 	p.setpanel();
+	p.defaultLayout();
 	p;
 }
 
@@ -42,5 +45,8 @@ method makeButton(name)
 }
 
 method buttonAction() {
-	java.lang.System.Out.println(" kar kard ");
+//	java.lang.System.Out.println(" kar kard ");
+	c.setButton();
+	c.setAction();
+
 }
