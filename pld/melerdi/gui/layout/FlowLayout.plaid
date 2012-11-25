@@ -1,15 +1,16 @@
 
 /*
     AUTHOR: Masoud Melerdi my.melerdi@gmail.com
-   	DESC:	
-	FILE:	
+    
+   	DESC:Constructs a new FlowLayout with the specified alignment and a default 5-unit horizontal and vertical gap. 
+   	The value of the alignment argument must be one of FlowLayout.LEFT, FlowLayout.RIGHT, FlowLayout.CENTER,
+   	FlowLayout.LEADING, or FlowLayout.TRAILING.
+   		
+	FILE: FlowLayout.plaid	
 */
 
 package melerdi.gui.layout;
 
 state FlowLayout case of Layout = ShiftBorder with ShiftGrid
 {
-	method test(){
-		printLine("this is flow layout");
-	}
 }

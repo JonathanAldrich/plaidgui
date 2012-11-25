@@ -7,22 +7,23 @@ import melerdi.gui.container.panel.*;
 import melerdi.gui.components.button.*;
 
 method main() {
+	
 	java.lang.System.out.println("test1");
-//	plaidgui.auxiliary.helper.prinkon();
+
 
  val w = makeWindow("hi");
  w.pack();
     w.show();
     w.setSize(400,200);
-   w.test();
-   
- /*
+    
+
  val b= makeButton("OK");
  java.lang.System.out.println(b);
  val p = makePanel();	
 	w.setParent(p);	
     w.refresh();
-    
+    p.borderLayout();
+    p.flowLayout("LEFT");
     p.setParent(b);
     p.refresh();
    
