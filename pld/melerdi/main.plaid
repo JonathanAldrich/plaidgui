@@ -7,8 +7,7 @@ import melerdi.gui.container.panel.*;
 import melerdi.gui.components.button.*;
 
 method main() {
-	
-	java.lang.System.out.println("test1");
+java.lang.System.out.println("test1");
 
 
  val w = makeWindow("hi");
@@ -17,14 +16,28 @@ method main() {
     w.setSize(400,200);
     
 
- val b= makeButton("OK");
+ val b= makeButton("Click me");
+ val b1= makeButton("hide");
  java.lang.System.out.println(b);
  val p = makePanel();	
+   
 	w.setParent(p);	
     w.refresh();
     p.borderLayout();
-    p.flowLayout("LEFT");
-    p.setParent(b);
+    p.flowLayout();
+       p.setParent(b);
+    p.setParent(b1);
+   
+    b.setAction({
+		printLine("Start calling callback...");
+		printLine("End calling callback...");
+		printLine("What's wrong?");
+	});
+   b1.setAction({
+   	   b.hide();
+   	   printLine("What's wrong?");
+   	   
+   });
     p.refresh();
    
     /*
