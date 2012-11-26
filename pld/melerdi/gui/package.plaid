@@ -37,16 +37,16 @@ method makePanel()
 
 method makeButton(name) 
 {
+	
 	val b= new Button { peer = javax.swing.JButton.new(name);} with ButtonAction{
 	};
 	b.setButton();
-	b.setAction();
+	//b.setAction();
 	b;
 }
 
 method buttonAction() {
-//	java.lang.System.Out.println(" kar kard ");
-	c.setButton();
-	c.setAction();
+	
+printLine(" kar kard ");
 
 }

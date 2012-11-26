@@ -6,14 +6,23 @@
 */
 
 package melerdi.gui.components.button;
-
+import melerdi.gui.*;
+import melerdi.*;
 state ButtonAction 
 {
 	
-	method setAction()
+	method setAction(action)
 	{
+      val handler = action;
+	
         printLine(" the action has been set");
-	   this.peer.addActionListener(plaidgui.auxiliary.Action.new(fn() => buttonAction()));
+	   this.peer.addActionListener(plaidgui.auxiliary.ActionListener.new(handler));
+	   	     
 	}
+//	method buttonAction() {
+//	
+//     printLine(" kar kard ");
+//
+//}
 } 
 
