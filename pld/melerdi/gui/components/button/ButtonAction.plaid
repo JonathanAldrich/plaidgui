@@ -11,10 +11,8 @@ import melerdi.*;
 state ButtonAction 
 {
 	
-	method setAction(action)
+	method setAction(handler)
 	{
-      val handler = action;
-	
         printLine(" the action has been set");
 	   this.peer.addActionListener(plaidgui.auxiliary.ActionListener.new(handler));
 	   	     
