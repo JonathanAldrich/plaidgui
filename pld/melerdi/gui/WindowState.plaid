@@ -1,15 +1,50 @@
 package melerdi.gui;
-
+import melerdi.gui.*;
 state WindowState
 {
 	method setupPeer()
 	{
-        this.peer.addWindowListener(
-		plaidgui.auxiliary.WindowListener.new(fn() => notifyClose()));
+        
+//	 	val handler = {
+//		printLine("Start calling callback...");
+//	    notifyClose(); 
+//		printLine("End calling callback...");
+//		printLine("What's wrong?");
+//};     
+		      
+//	    this.peer.addWindowListener(
+//	plaidgui.auxiliary.WindowListener.new(fn() => 
+//	{
+//	printLine("Start Window Iconofied...");
+//	notifyClose();
+//	printLine("What's wrong?");
+//	}));
 	    this <- UndisplyableWindow;
 		this <- UnsizedWindow;
 		this <- UnpositionedWindow;
 		this <- EnabledWindow;
 	}
+	method windowClosing(){
 		
+	this.peer.addWindowListener(plaidgui.auxiliary.WindowListener.new(fn() => 
+	{
+		printLine("Start window closing....");
+	     printLine("Window hav been closed....");
+	          //java.lang.System.exit(0);
+		printLine("What's wrong?");	
+	}));
 }
+	method windowIconofied(){
+		
+	this.peer.addWindowListener(plaidgui.auxiliary.WindowListener.new(fn() => 
+	{
+		printLine("Start window Iconofied....");
+	    printLine("Window hav been iconofied");
+//		printLine("What's wrong?");
+		printLine("What's wrong?");	
+	}));
+
+}
+
+}
+

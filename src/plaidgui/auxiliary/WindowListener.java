@@ -11,8 +11,16 @@ public class WindowListener extends WindowAdapter {
 	}
 	
 	@Override
+	
+	public void windowIconified(WindowEvent e){
+		 System.out.println("Window Iconofied");
+			plaidFunction.invoke(Util.unit());
+	 }
 	public void windowClosing(WindowEvent e) {
 		System.out.println("invoking close");
 		plaidFunction.invoke(Util.unit());
 	}
+	
+	 
+	
 }

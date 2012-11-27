@@ -14,7 +14,22 @@ java.lang.System.out.println("test1");
  w.pack();
     w.show();
     w.setSize(400,200);
-    
+
+
+//w.windowIconofied({
+//		printLine("Start Window Iconofied...");
+//	    printLine("Window hav been iconofied");
+//		printLine("What's wrong?");
+//   
+//});
+//    w.windowClosing({
+//		printLine("Start calling callback...");
+//	    notifyClose(); 
+//		printLine("What's wrong?");
+//   
+//});
+w.windowClosing();
+w.windowIconofied();
 
  val b= makeButton("Click me");
  val b1= makeButton("hide");
@@ -29,12 +44,13 @@ java.lang.System.out.println("test1");
     p.setParent(b1);
    
     b.setAction({
-		printLine("Start calling callback...");
-		printLine("End calling callback...");
+		printLine("the button has been clicked");
+		printLine("the buttn clicking ....");
 		printLine("What's wrong?");
 	});
    b1.setAction({
    	   b.hide();
+   	   printLine(" the button has been disapeared");
    	   printLine("What's wrong?");
    	   
    });
