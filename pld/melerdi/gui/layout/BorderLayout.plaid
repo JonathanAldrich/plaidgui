@@ -1,0 +1,12 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.layout;
+
+state BorderLayout case of Layout = ShiftFlow with ShiftGrid
+{
+}

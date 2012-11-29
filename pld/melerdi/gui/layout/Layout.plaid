@@ -1,0 +1,36 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+
+package melerdi.gui.layout;
+import melerdi.gui.container.window.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.components.button.*;
+
+import javax.swing.*;
+import java.lang.*;
+import java.awt.*;
+
+state Layout
+{
+	method defaultLayout()
+	{
+		match (this) 
+		{
+			case Window 
+			{
+				this.peer.setLayout(java.awt.BorderLayout.new());
+				this <-BorderLayout;
+			}
+			case Panel 
+			{
+				this.peer.setLayout(java.awt.FlowLayout.new());
+				this <-FlowLayout;
+			}
+		};
+	}
+}

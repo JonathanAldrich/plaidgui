@@ -1,0 +1,22 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.components.button;
+
+state Button = 
+	ButtonVisibility with ButtonParenting
+{
+	val peer;
+	val name;
+	
+	method setButton()
+	{
+        printLine(" this s the Button");
+		this <- UnparentedButton;
+		this <- VisibleButton;
+	}
+} 

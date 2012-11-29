@@ -1,0 +1,118 @@
+package melerdi;
+
+import melerdi.*;
+import melerdi.gui.*;
+import melerdi.gui.container.window.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.components.button.*;
+
+method main() {
+java.lang.System.out.println("test1");
+
+
+ val w = makeWindow("hi");
+ w.pack();
+    w.show();
+    w.setSize(400,200);
+
+
+//w.windowIconofied({
+//		printLine("Start Window Iconofied...");
+//	    printLine("Window hav been iconofied");
+//		printLine("What's wrong?");
+//   
+//});
+//    w.windowClosing({
+//		printLine("Start calling callback...");
+//	    notifyClose(); 
+//		printLine("What's wrong?");
+//   
+//});
+w.windowClosing();
+w.windowIconofied();
+
+ val b= makeButton("Click me");
+ val b1= makeButton("hide");
+ java.lang.System.out.println(b);
+ val p = makePanel();	
+   
+	w.setParent(p);	
+    w.refresh();
+    p.borderLayout();
+    p.flowLayout();
+       p.setParent(b);
+    p.setParent(b1);
+   
+    b.setAction({
+		printLine("the button has been clicked");
+		printLine("the buttn clicking ....");
+		printLine("What's wrong?");
+	});
+   b1.setAction({
+   	   b.hide();
+   	   printLine(" the button has been disapeared");
+   	   printLine("What's wrong?");
+   	   
+   });
+    p.refresh();
+   
+    /*
+    w.disable();
+    match (w) {
+		case DisabledWindow {
+			printLine(" window is in DisabledWindow state;!");
+		}
+		};
+		w.enable();
+	match (w) {
+		case EnabledWindow {
+			printLine(" window is in EnabledWindow state;!");
+		}
+		};	
+	val p = makePanel("button1");	
+	w.setParent(p);	
+	val p1 = makePanel("button2");
+	w.setParent(p1);
+	w.refresh();
+	printLine("what is the statuse of panel please explain about????");
+	printLine(p1);
+    p1.hidepanel();
+  //printLine(w);
+  /*
+   w.setSize(400,200);
+		match (w) {
+		case WindowState {
+			printLine("VisibleWindow;!");
+		}
+		case DeiconofiedWindow {
+			printLine("DeiconofiedWindow!");
+		}
+		case HiddenWindow {
+			printLine("HiddenWindow");
+		}
+		case UndisplyableWindow {
+			printLine("UndisplyableWindow");
+		}
+		case NewWindow {
+			printLine("WindowState");
+		}
+	};
+   //	w.show();
+   	match (w) {
+		case HiddenWindow {
+			printLine("HiddenWindow");
+		}
+		case ActivateWindow {
+			printLine("ActivateWindow!");
+		}
+		case DeiconofiedWindow {
+			printLine("DeiconofiedWindow!");
+		}	
+	    case UndisplyableWindow {
+			printLine("UndisplyableWindow");
+		}
+	};
+*/
+   	java.lang.System.out.println("finish test");
+
+}

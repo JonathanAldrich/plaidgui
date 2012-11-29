@@ -1,0 +1,55 @@
+package melerdi.gui;
+
+import melerdi.gui.container.window.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.components.button.*;
+import melerdi.gui.layout.*;
+
+method makeWindow(name)
+{  
+	val win = new Window
+	{
+		name = name; 		
+	} with WindowState
+	{
+		peer = javax.swing.JFrame.new(name);
+	} with Layout;
+	win.defaultLayout();
+	win.setupPeer();
+	win;
+   }
+   
+method notifyClose() 
+{
+		printLine("Start to Close window");
+		java.lang.System.exit(0);
+		printLine("whats wrong!?");
+		printLine("whats wrong!?");
+}
+
+method makePanel() 
+{
+	val p= new Panel 
+	{ 
+		peer = javax.swing.JPanel.new();
+	}with Layout;
+	p.setpanel();
+	p.defaultLayout();
+	p;
+}
+
+method makeButton(name) 
+{
+	
+	val b= new Button { peer = javax.swing.JButton.new(name);} with ButtonAction{
+	};
+	b.setButton();
+	//b.setAction();
+	b;
+}
+
+method buttonAction() {
+	
+printLine(" kar kard ");
+
+}
