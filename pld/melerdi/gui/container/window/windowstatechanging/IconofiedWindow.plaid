@@ -1,0 +1,18 @@
+
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.container.window.windowstatechanging;
+	
+state IconofiedWindow 
+{
+	method deiconofy()
+	{
+		this.peer.setState(Frame.ICONIFIED);
+		this<-DeiconofiedWindow;
+	}
+}

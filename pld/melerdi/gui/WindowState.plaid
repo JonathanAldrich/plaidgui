@@ -26,17 +26,17 @@ state WindowState
 	}
 	method windowClosing(){
 		
-	this.peer.addWindowListener(plaidgui.auxiliary.WindowListener.new(fn() => 
+	this.peer.addWindowListener(plaidgui.auxiliary.WindowClosingListener.new(fn() => 
 	{
 		printLine("Start window closing....");
 	     printLine("Window hav been closed....");
-	          //java.lang.System.exit(0);
+	    java.lang.System.exit(0);
 		printLine("What's wrong?");	
 	}));
 }
 	method windowIconofied(){
 		
-	this.peer.addWindowListener(plaidgui.auxiliary.WindowListener.new(fn() => 
+	this.peer.addWindowListener(plaidgui.auxiliary.WindowIconofiedListener.new(fn() => 
 	{
 		printLine("Start window Iconofied....");
 	    printLine("Window hav been iconofied");

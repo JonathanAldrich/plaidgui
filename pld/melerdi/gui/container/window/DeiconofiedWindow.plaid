@@ -1,8 +1,0 @@
-package melerdi.gui.container.window;
-
-state DeiconofiedWindow case of Iconofying{
-     method iconofy(){
-		this.peer.setState(Frame.ICONIFIED);
-		this<-IconofiedWindow;
-    }
-  }
