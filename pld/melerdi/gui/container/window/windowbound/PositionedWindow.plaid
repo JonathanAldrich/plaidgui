@@ -4,7 +4,7 @@
    	DESC:	
 	FILE:	
 */
-package melerdi.gui.container.window;
+package melerdi.gui.container.window.windowbound;
 
 state PositionedWindow case of Positioning
 {
