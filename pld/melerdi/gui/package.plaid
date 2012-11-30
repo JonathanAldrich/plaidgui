@@ -1,6 +1,14 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
 package melerdi.gui;
 
 import melerdi.gui.container.window.*;
+import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.container.panel.*;
 import melerdi.gui.components.button.*;
 import melerdi.gui.layout.*;
@@ -14,8 +22,10 @@ method makeWindow(name)
 	{
 		peer = javax.swing.JFrame.new(name);
 	} with Layout;
-	win.defaultLayout();
+	
 	win.setupPeer();
+	win.defaultLayout();
+	win.closeWindow();
 	win;
    }
    
@@ -24,7 +34,7 @@ method notifyClose()
 		printLine("Start to Close window");
 		java.lang.System.exit(0);
 		printLine("whats wrong!?");
-		printLine("whats wrong!?");
+	
 }
 
 method makePanel() 

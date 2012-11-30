@@ -1,0 +1,35 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.container.window.windowstate;
+import  melerdi.gui.*;
+state WindowState
+{
+	
+	method windowClosing(handle)
+	{
+		this.peer.addWindowListener(plaidgui.auxiliary.WindowClosingListener.new(handle));
+	}
+	
+	method windowIconofied(handle)
+	{
+		this.peer.addWindowListener(plaidgui.auxiliary.WindowIconofiedListener.new(handle));
+	}
+	
+	method closeWindow()
+	{
+		this.peer.addWindowListener(plaidgui.auxiliary.WindowClosingListener.new(fn() => {
+		notifyClose();
+		printLine("whats wrong");
+		}));
+//				{
+//					closeNotify();
+//					printLine("whats wrong");
+//				};));	
+	}
+}
+

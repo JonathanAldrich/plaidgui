@@ -5,8 +5,8 @@
 	FILE:	
 */
 
-package melerdi.gui.container.window.windowstatechanging;
+package melerdi.gui.container.window.windowstate;
 
-state ActivatedWindow 
+state GainedFocusWindow 
 {
 }

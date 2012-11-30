@@ -1,3 +1,11 @@
+
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
 package melerdi.gui.container.window;
 
 state UndisplyableWindow case of NewWindow
@@ -6,16 +14,27 @@ state UndisplyableWindow case of NewWindow
 	method pack()
 	{
 		this.peer.pack();
+		this <- VisibleWindow;
+		this <- WindowStatechanged;
+		this <- Deiconofying;
+		this <- ActivatedWindow;
+		this <- DeiconofiedWindow;
+		this <- PackedWindow;
+		this <- DefaultPosition;
+		
 		this <- HiddenWindow;
-	}
+		}
 	method show()
 	{
 		this.peer.pack();
 		this.peer.setVisible(true);
+		
 		this <- VisibleWindow;
-		this <- ActivateWindow;
+		this <- WindowStatechanged;
+		this <- Deiconofying;
+		this <- ActivatedWindow;
 		this <- DeiconofiedWindow;
-		this <- packedWindow;
+		this <- PackedWindow;
 		this <- DefaultPosition;
 	} 
 	method decorate(bool)

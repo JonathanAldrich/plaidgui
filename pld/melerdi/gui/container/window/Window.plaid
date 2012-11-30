@@ -1,31 +1,37 @@
+
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
 package melerdi.gui.container.window;
 
-import javax.swing.*;
-import java.lang.*;
-import java.awt.*;
 
 state Window = 
 	NewWindow with BoundedWindow with Enabling
 {
+	method setupPeer()
+	{
+	    this <- UndisplyableWindow;
+		this <- UnsizedWindow;
+		this <- UnpositionedWindow;
+		this <- EnabledWindow;
+	}
+	
 	method setParent(p)
 	{
 		this.peer.add(p.getPeer());
     	p.changeState();
     }
 
-//		method layout()
-//	{
-//		//val manager = java.awt.FlowLayout.new();
-//        java.lang.System.out.println(FlowLayout.new());
-//        java.lang.System.out.println("testing layout manager" );
-//        this.peer.setLayout(BorderLayout.new());
-//	}
-
 	method refresh()
 	{
 		java.lang.System.out.println("refresh the frame" );
 		this.peer.validate();
 	}
+	
 	method getPeer(){
 		this.peer
 	}
