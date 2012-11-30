@@ -6,7 +6,7 @@
 */
 package melerdi.gui.container.window.windowstate;
 
-import melerdi.gui.container.window.*;
+import melerdi.gui.container.window.windowstatus.*;
 
 state WindowStatechanged case of VisibleWindow
 {

@@ -7,11 +7,15 @@
 
 package melerdi.gui;
 
-import melerdi.gui.container.window.*;
-import melerdi.gui.container.window.windowstate.*;
-import melerdi.gui.container.panel.*;
-import melerdi.gui.components.button.*;
+import melerdi.*;
 import melerdi.gui.layout.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.container.window.*;
+import melerdi.gui.components.button.*;
+import melerdi.gui.container.window.windowbound.*;
+import melerdi.gui.container.window.windowstate.*;
+import melerdi.gui.container.window.windowstatus.*;
+
 
 method makeWindow(name)
 {  

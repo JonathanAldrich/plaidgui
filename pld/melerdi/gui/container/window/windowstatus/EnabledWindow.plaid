@@ -12,6 +12,5 @@ state EnabledWindow case of Enabling
 	{
 		this.peer.setEnabled(false);
 		this <- DisabledWindow;
-		this <- DeactivatedWindow;
 	}
 }
