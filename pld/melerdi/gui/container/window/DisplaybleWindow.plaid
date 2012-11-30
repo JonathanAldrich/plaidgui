@@ -1,5 +1,0 @@
-package melerdi.gui.container.window;
-
-state DisplaybleWindow case of NewWindow 
-{
-}

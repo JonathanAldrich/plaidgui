@@ -5,7 +5,7 @@
 	FILE:	
 */
 
-package melerdi.gui.container.window;
+package melerdi.gui.container.window.windowbound;
 
 state BoundedWindow =
 	Positioning with Sizing

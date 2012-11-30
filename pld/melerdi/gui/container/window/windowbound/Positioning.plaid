@@ -4,8 +4,8 @@
    	DESC:	
 	FILE:	
 */
-package melerdi.gui.container.window;
+package melerdi.gui.container.window.windowbound;
 
-state Enabling 
+state Positioning
 {
 }

@@ -4,10 +4,8 @@
    	DESC:	
 	FILE:	
 */
+package melerdi.gui.container.window.windowstatus;
 
-package melerdi.gui.container.window;
-
-import javax.swing.*;
 
 state DisabledWindow case of Enabling
 {

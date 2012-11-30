@@ -57,7 +57,7 @@ method main() {
        printLine(" the window have been hide");
        w.show();
 //   
-    /*
+   
     w.disable();
     match (w) {
 		case DisabledWindow {
@@ -79,7 +79,7 @@ method main() {
 	printLine(p1);
     p1.hidepanel();
   //printLine(w);
-  /*
+
    w.setSize(400,200);
 		match (w) {
 		case WindowState {
@@ -113,7 +113,7 @@ method main() {
 			printLine("UndisplyableWindow");
 		}
 	};
-*/
+
    	java.lang.System.out.println("finish test");
 
 }

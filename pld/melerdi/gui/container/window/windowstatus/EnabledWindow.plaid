@@ -4,8 +4,8 @@
    	DESC:	
 	FILE:	
 */
-package melerdi.gui.container.window;
-import  melerdi.gui.container.window.windowstate.*;
+package melerdi.gui.container.window.windowstatus;
+
 state EnabledWindow case of Enabling
 {
 	method disable()

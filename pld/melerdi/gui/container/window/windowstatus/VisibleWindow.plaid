@@ -1,5 +1,12 @@
-package melerdi.gui.container.window;
-	
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.container.window.windowstatus;	
+
 state VisibleWindow case of DisplaybleWindow 
 
 {
