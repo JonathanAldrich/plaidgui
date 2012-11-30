@@ -5,13 +5,13 @@
 	FILE:	
 */
 package melerdi.gui.container.window;
-
+import  melerdi.gui.container.window.windowstate.*;
 state EnabledWindow case of Enabling
 {
 	method disable()
 	{
 		this.peer.setEnabled(false);
 		this <- DisabledWindow;
-		this <- DeactivateWindow;
+		this <- DeactivatedWindow;
 	}
 }

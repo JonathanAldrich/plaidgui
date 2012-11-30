@@ -5,7 +5,7 @@
 	FILE:	
 */
 
-package melerdi.gui.container.window.windowstatechanging;
+package melerdi.gui.container.window.windowstate;
 
 state Iconofying case of WindowStatechanged =
 	DeactivatedWindow with LostFocusWindow with IconofiedWindow

@@ -4,44 +4,42 @@ import melerdi.*;
 import melerdi.gui.*;
 import melerdi.gui.container.window.*;
 import melerdi.gui.container.panel.*;
+import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.components.button.*;
 
 method main() {
-java.lang.System.out.println("test1");
+	java.lang.System.out.println("test1");
 
+    val w = makeWindow("hi");
+   //w.pack();
+   w.show();
 
- val w = makeWindow("hi");
- w.pack();
-    w.show();
     w.setSize(400,200);
-
-
-//w.windowIconofied({
-//		printLine("Start Window Iconofied...");
-//	    printLine("Window hav been iconofied");
-//		printLine("What's wrong?");
-//   
-//});
+	w.windowIconofied({
+			printLine("Start Window Iconofied...");
+		    printLine("Window hav been iconofied");
+			printLine("What's wrong?");
+	   
+	});
 //    w.windowClosing({
 //		printLine("Start calling callback...");
 //	    notifyClose(); 
 //		printLine("What's wrong?");
 //   
-//});
-w.windowClosing();
-w.windowIconofied();
+//	});
+//w.windowClosing();
+//w.windowIconofied();
 
- val b= makeButton("Click me");
- val b1= makeButton("hide");
- java.lang.System.out.println(b);
- val p = makePanel();	
+	 val b= makeButton("Click me");
+	 val b1= makeButton("hide");
+	 val p = makePanel();	
    
 	w.setParent(p);	
-    w.refresh();
-    p.borderLayout();
-    p.flowLayout();
-       p.setParent(b);
-    p.setParent(b1);
+	w.refresh();
+	p.borderLayout();
+	p.flowLayout();
+	p.setParent(b);
+	p.setParent(b1);
    
     b.setAction({
 		printLine("the button has been clicked");
@@ -55,7 +53,10 @@ w.windowIconofied();
    	   
    });
     p.refresh();
-   
+       w.hide();
+       printLine(" the window have been hide");
+       w.show();
+//   
     /*
     w.disable();
     match (w) {

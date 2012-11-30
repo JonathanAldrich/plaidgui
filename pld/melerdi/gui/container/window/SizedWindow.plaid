@@ -4,6 +4,7 @@
    	DESC:	
 	FILE:	
 */
+
 package melerdi.gui.container.window;
 
 state SizedWindow case of Sizing

@@ -4,9 +4,9 @@ import java.awt.event.*;
 import plaid.runtime.*;
 
 // TODO: replace this with pure Plaid code when Plaid/Java interop improves
-public class WindowListener extends WindowAdapter {
+public class WindowIconofiedListener extends WindowAdapter {
 	PlaidMethod plaidFunction;
-	public WindowListener(PlaidMethod f) {
+	public WindowIconofiedListener(PlaidMethod f) {
 		plaidFunction = f;
 	}
 	
@@ -16,11 +16,6 @@ public class WindowListener extends WindowAdapter {
 		 System.out.println("Window Iconofied");
 			plaidFunction.invoke(Util.unit());
 	 }
-	public void windowClosing(WindowEvent e) {
-		System.out.println("invoking close");
-		plaidFunction.invoke(Util.unit());
-	}
-	
-	 
+		 
 	
 }
