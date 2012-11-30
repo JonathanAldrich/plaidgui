@@ -5,6 +5,7 @@
 	FILE:	
 */
 package melerdi.gui.container.window.windowstatus;
+import melerdi.gui.container.window.*;
 
 state DisplaybleWindow case of NewWindow 
 {

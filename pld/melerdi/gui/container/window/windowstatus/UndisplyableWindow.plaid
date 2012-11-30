@@ -6,6 +6,13 @@
 */
 package melerdi.gui.container.window.windowstatus;
 
+import melerdi.gui.*;
+import melerdi.gui.container.panel.*;
+import melerdi.gui.container.window.*;
+import melerdi.gui.components.button.*;
+import melerdi.gui.container.window.windowbound.*;
+import melerdi.gui.container.window.windowstate.*;
+
 state UndisplyableWindow case of NewWindow
 {
 	var bool;

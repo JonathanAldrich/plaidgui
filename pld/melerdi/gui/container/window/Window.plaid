@@ -7,7 +7,8 @@
 */
 
 package melerdi.gui.container.window;
-
+import melerdi.gui.container.window.windowstatus.*;
+import melerdi.gui.container.window.windowbound.*;
 
 state Window = 
 	NewWindow with BoundedWindow with Enabling
