@@ -8,7 +8,7 @@
 package melerdi.gui.widgets.label;
 
 state Label = 
-	LabelVisibility with LabelParenting
+	LabelVisibility with LabelParenting with LabelBordering
 {
 	val peer;
 	val name;
