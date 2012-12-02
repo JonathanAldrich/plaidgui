@@ -5,7 +5,7 @@
 	FILE:	
 */
 
-package melerdi.gui.components.button;
+package melerdi.gui.widgets.textbox;
 
-state ButtonParenting {}
+state TextBoxParenting {}
  

@@ -6,11 +6,6 @@
 */
 package melerdi.gui.container.window.windowstatus;
 
-state EnabledWindow case of WindowEnabling
+state WindowEnabling 
 {
-	method disable()
-	{
-		this.peer.setEnabled(false);
-		this <- DisabledWindow;
-	}
 }

@@ -1,0 +1,28 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.widgets.textbox;
+import java.lang.*;
+
+state TextBox = 
+	TextBoxVisibility with TextBoxParenting
+{
+	val peer;
+	val name;
+	
+	method setTextBox()
+	{
+       	this <- UnparentedTextBox;
+		this <- VisibleTextBox;
+		printLine("TextBox's stats have been initialized");
+	}
+	
+	method getText()
+	{
+		this.peer.getText();
+	}
+} 

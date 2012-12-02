@@ -2,9 +2,13 @@ package melerdi;
 
 import melerdi.*;
 import melerdi.gui.*;
+import melerdi.gui.component.*;
+import melerdi.gui.action.*;
 import melerdi.gui.container.panel.*;
 import melerdi.gui.container.window.*;
-import melerdi.gui.components.button.*;
+import melerdi.gui.widgets.button.*;
+import melerdi.gui.widgets.label.*;
+import melerdi.gui.widgets.textbox.*;
 import melerdi.gui.container.window.windowbound.*;
 import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.container.window.windowstatus.*;
@@ -36,23 +40,71 @@ method main() {
 	 val b= makeButton("Click me");
 	 val b1= makeButton("hide");
 	 val p = makePanel();	
-   
-	w.setParent(p);	
-	w.refresh();
+	 val l1= makeLabel("Hi friend :");
+     val t1= makeTextBox("Hi Masoud");
+     w.setParent(p);	
+    w.refresh();
 	p.borderLayout();
 	p.flowLayout();
+	p.setParent(l1);
 	p.setParent(b);
 	p.setParent(b1);
-   
+	p.setParent(t1);
+	t1.setAction({
+		 printLine(t1.getText()); 
+		 printLine("whats wrong");
+		});
+    b1.setSize(100,100);
+	l1.setSize(50,50);
+    b.setSize(300,100);
+	printLine("*******************************************************************************");
+    printLine(l1);
+	printLine("*******************************************************************************");
     b.setAction({
-		printLine("the button has been clicked");
-		printLine("the buttn clicking ....");
+	    match (b1)
+		{
+			case DisabledComponent
+			{
+				printLine("the button is Disable");
+				b1.enable();
+				b.setText("disable");
+				printLine("*******************************************************************************");
+			    printLine(b1);
+				printLine("*******************************************************************************");
+			}
+			case EnabledComponent
+			{
+				printLine("the button is Enable");
+				b1.disable();
+				b.setText("enable");
+				printLine("*******************************************************************************");
+			    printLine(b1);
+				printLine("*******************************************************************************");
+			}
+			
+	};
+		
+		
 		printLine("What's wrong?");
 	});
    b1.setAction({
-   	   b.hide();
-   	   printLine(" the button has been disapeared");
-   	   printLine("What's wrong?");
+   	  match (b)
+	{
+			case VisibleButton
+			{
+				b.hide();
+				b1.setText("show the button");
+				printLine(" the button has been disapeared");
+				printLine("What's wrong?");
+			}
+			case InvisibleButton
+			{
+				b.show();
+			    b1.setText("hide the button");
+				printLine(" the button has been apeared");
+				printLine("What's wrong?");
+			}
+	};
    	   
    });
     p.refresh();

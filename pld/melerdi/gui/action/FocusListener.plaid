@@ -1,0 +1,21 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.action;
+import melerdi.gui.*;
+import melerdi.*;
+
+	state FocusListener 
+{
+	
+	method setFocus(handler)
+	{
+			this.peer.addFocusListener(plaidgui.auxiliary.FocusListener.new(handler));
+	   	     
+	}
+} 
+

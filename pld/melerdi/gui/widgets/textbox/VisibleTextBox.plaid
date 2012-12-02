@@ -1,0 +1,15 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.widgets.textbox;
+
+state VisibleTextBox case of TextBoxVisibility{
+method hide(){
+this.peer.setVisible(false);
+this <- InvisibleTextBox;
+}
+}

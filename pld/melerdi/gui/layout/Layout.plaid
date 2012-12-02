@@ -9,7 +9,7 @@
 package melerdi.gui.layout;
 import melerdi.gui.container.window.*;
 import melerdi.gui.container.panel.*;
-import melerdi.gui.components.button.*;
+import melerdi.gui.widgets.button.*;
 
 import javax.swing.*;
 import java.lang.*;
