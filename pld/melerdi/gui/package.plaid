@@ -9,6 +9,7 @@ package melerdi.gui;
 
 import melerdi.*;
 import melerdi.gui.layout.*;
+import melerdi.gui.action.*;
 import melerdi.gui.component.*;
 import melerdi.gui.container.panel.*;
 import melerdi.gui.container.window.*;
@@ -54,7 +55,7 @@ method makeButton(name)
 	val b= new Button 
 	{
 		 peer = javax.swing.JButton.new(name);
-	}with ButtonAction with Component;
+	}with ActionListener with Component;
 	
 	b.setButton();
 	b.setwidgetstate();
@@ -81,7 +82,7 @@ method makeTextBox(name)
 	val t= new TextBox 
 	{
 		 peer = javax.swing.JTextField.new(name);
-	} with Component;
+	} with Component with ActionListener with FocusListener;
 	
 	t.setTextBox();
 	t.setwidgetstate();
