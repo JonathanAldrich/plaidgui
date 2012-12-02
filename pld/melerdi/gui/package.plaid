@@ -75,7 +75,7 @@ method makeLabel(name)
 	l;
 }
 
-method makeTestBox(name) 
+method makeTextBox(name) 
 {
 	
 	val t= new TextBox 
