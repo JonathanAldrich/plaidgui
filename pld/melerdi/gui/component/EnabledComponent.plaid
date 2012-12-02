@@ -1,0 +1,16 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+package melerdi.gui.component;
+
+state EnabledComponent case of ComponentEnablity
+{
+		method disable()
+	{
+		this.peer.setEnabled(false);
+		this <- DisabledComponent;
+	}
+}

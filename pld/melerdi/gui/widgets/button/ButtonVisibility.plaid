@@ -4,8 +4,8 @@
    	DESC:	
 	FILE:	
 */
-package melerdi.gui.container.window.windowstatus;
 
-state Enabling 
-{
-}
+package melerdi.gui.widgets.button;
+
+state ButtonVisibility {}
+ 

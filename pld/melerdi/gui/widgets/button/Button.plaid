@@ -5,7 +5,7 @@
 	FILE:	
 */
 
-package melerdi.gui.components.button;
+package melerdi.gui.widgets.button;
 
 state Button = 
 	ButtonVisibility with ButtonParenting
@@ -15,8 +15,8 @@ state Button =
 	
 	method setButton()
 	{
-        printLine(" this s the Button");
-		this <- UnparentedButton;
+       	this <- UnparentedButton;
 		this <- VisibleButton;
+		printLine("Button's stats have been initialized");
 	}
 } 

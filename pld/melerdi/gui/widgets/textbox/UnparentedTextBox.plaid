@@ -5,13 +5,13 @@
 	FILE:	
 */
 
-package melerdi.gui.components.button;
+package melerdi.gui.widgets.textbox;
 
-state UnparentedButton case of ButtonParenting
+state UnparentedTextBox case of TextBoxParenting
 {
 	method changeState()
 	{
-	this <-ParentedButton;
+	this <-ParentedTextBox;
 	}
 method getPeer() 
 	{ 

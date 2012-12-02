@@ -5,10 +5,10 @@
 	FILE:	
 */
 
-package melerdi.gui.components.button;
+package melerdi.gui.action;
 import melerdi.gui.*;
 import melerdi.*;
-state ButtonAction 
+state ActionListener 
 {
 	
 	method setAction(handler)
