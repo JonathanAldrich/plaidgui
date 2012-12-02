@@ -1,0 +1,22 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.widgets.label;
+
+state UnparentedLabel case of LabelParenting
+{
+	method changeState()
+	{
+	this <-ParentedLabel;
+	}
+method getPeer() 
+	{ 
+		this.peer 
+	}
+}
+
+ 
