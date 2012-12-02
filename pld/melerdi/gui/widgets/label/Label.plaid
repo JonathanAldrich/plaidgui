@@ -1,0 +1,22 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.widgets.label;
+
+state Label = 
+	LabelVisibility with LabelParenting
+{
+	val peer;
+	val name;
+	
+	method setLabel()
+	{
+       	this <- UnparentedLabel;
+		this <- VisibleLabel;
+		printLine("Label's stats have been initialized");
+	}
+} 

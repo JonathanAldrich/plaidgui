@@ -9,9 +9,12 @@ package melerdi.gui;
 
 import melerdi.*;
 import melerdi.gui.layout.*;
+import melerdi.gui.component.*;
 import melerdi.gui.container.panel.*;
 import melerdi.gui.container.window.*;
-import melerdi.gui.components.button.*;
+import melerdi.gui.widgets.button.*;
+import melerdi.gui.widgets.label.*;
+import melerdi.gui.widgets.textbox.*;
 import melerdi.gui.container.window.windowbound.*;
 import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.container.window.windowstatus.*;
@@ -33,37 +36,61 @@ method makeWindow(name)
 	win;
    }
    
-method notifyClose() 
-{
-		printLine("Start to Close window");
-		java.lang.System.exit(0);
-		printLine("whats wrong!?");
-	
-}
-
 method makePanel() 
 {
 	val p= new Panel 
 	{ 
 		peer = javax.swing.JPanel.new();
-	}with Layout;
+	}with Layout with Component;
 	p.setpanel();
 	p.defaultLayout();
+	p.setwidgetstate();
 	p;
 }
 
 method makeButton(name) 
 {
 	
-	val b= new Button { peer = javax.swing.JButton.new(name);} with ButtonAction{
-	};
+	val b= new Button 
+	{
+		 peer = javax.swing.JButton.new(name);
+	}with ButtonAction with Component;
+	
 	b.setButton();
+	b.setwidgetstate();
 	//b.setAction();
 	b;
 }
 
-method buttonAction() {
+method makeLabel(name) 
+{
 	
-printLine(" kar kard ");
+	val l= new Label 
+	{
+		 peer = javax.swing.JLabel.new(name);
+	} with Component;
+	
+	l.setLabel();
+	l.setwidgetstate();
+	l;
+}
 
+method makeTestBox(name) 
+{
+	
+	val t= new TextBox 
+	{
+		 peer = javax.swing.JTextField.new(name);
+	} with Component;
+	
+	t.setTextBox();
+	t.setwidgetstate();
+	t;
+}
+method notifyClose() 
+{
+		printLine("Start to Close window");
+		java.lang.System.exit(0);
+		printLine("whats wrong!?");
+	
 }

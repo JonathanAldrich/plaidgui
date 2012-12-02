@@ -1,0 +1,22 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+
+package melerdi.gui.widgets.button;
+
+state Button = 
+	ButtonVisibility with ButtonParenting
+{
+	val peer;
+	val name;
+	
+	method setButton()
+	{
+       	this <- UnparentedButton;
+		this <- VisibleButton;
+		printLine("Button's stats have been initialized");
+	}
+} 
