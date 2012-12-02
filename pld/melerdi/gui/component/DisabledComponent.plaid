@@ -4,14 +4,13 @@
    	DESC:	
 	FILE:	
 */
-package melerdi.gui.container.window.windowstatus;
+package melerdi.gui.component;
 
-
-state DisabledWindow case of WindowEnabling
+state DisabledComponent case of ComponentEnablity
 {
 	method enable()
 	{
 		this.peer.setEnabled(true);
-		this <- EnabledWindow;
+		this <- EnabledComponent;
 	}
 }

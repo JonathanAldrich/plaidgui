@@ -6,6 +6,6 @@
 */
 package melerdi.gui.container.window.windowstatus;
 
-state Enabling 
+state WindowEnabling 
 {
 }
