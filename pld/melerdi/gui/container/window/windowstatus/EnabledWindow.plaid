@@ -6,7 +6,7 @@
 */
 package melerdi.gui.container.window.windowstatus;
 
-state EnabledWindow case of Enabling
+state EnabledWindow case of WindowEnabling
 {
 	method disable()
 	{

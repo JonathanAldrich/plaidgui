@@ -4,8 +4,8 @@
    	DESC:	
 	FILE:	
 */
+package melerdi.gui.component;
 
-package melerdi.gui.components.button;
-
-state ButtonParenting {}
- 
+state ComponentEnablity 
+{
+}
