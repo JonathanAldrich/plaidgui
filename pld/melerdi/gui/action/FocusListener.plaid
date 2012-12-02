@@ -8,13 +8,18 @@
 package melerdi.gui.action;
 import melerdi.gui.*;
 import melerdi.*;
-
+import java.util.*;
 	state FocusListener 
 {
 	
-	method setFocus(handler)
+	method gainFocus(handle)
 	{
-			this.peer.addFocusListener(plaidgui.auxiliary.FocusListener.new(handler));
+			this.peer.addFocusListener(plaidgui.auxiliary.gainFocusListener.new(handle));
+	   	     
+	}
+	method lostFocus(handle)
+	{
+			this.peer.addFocusListener(plaidgui.auxiliary.lostFocusListener.new(handle));
 	   	     
 	}
 } 

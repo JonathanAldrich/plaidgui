@@ -54,6 +54,14 @@ method main() {
 		 printLine(t1.getText()); 
 		 printLine("whats wrong");
 		});
+	t1.gainFocus({
+	printLine(" the taxte bus gained focus")
+	rintLine("whats wrong");
+	});	
+	t1.lostFocus({
+	printLine(" the taxte bus lost focus")
+	rintLine("whats wrong");
+	});	
     b1.setSize(100,100);
 	l1.setSize(50,50);
     b.setSize(300,100);
