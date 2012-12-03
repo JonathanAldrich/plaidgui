@@ -41,25 +41,31 @@ method main() {
 	 val b1= makeButton("hide");
 	 val p = makePanel();	
 	 val l1= makeLabel("Hi friend :");
-     val t1= makeTextBox("Hi Masoud");
+     val t1= makeTextBox("the Action listener in textBox when you press Enter");
+     
      w.setParent(p);	
     w.refresh();
+    val b2=makeParentedButton(p,"parented button");
+    printLine("parented*******************************************************************************");
+    printLine(b2);
+	printLine("parented*******************************************************************************");
 	p.borderLayout();
 	p.flowLayout();
 	p.setParent(l1);
 	p.setParent(b);
 	p.setParent(b1);
 	p.setParent(t1);
+	
 	t1.setAction({
 		 printLine(t1.getText()); 
 		 printLine("whats wrong");
 		});
 	t1.gainFocus({
-	printLine(" the taxte bus gained focus")
+	printLine(" the taxtBox gained focus")
 	rintLine("whats wrong");
 	});	
 	t1.lostFocus({
-	printLine(" the taxte bus lost focus")
+	printLine(" the taxtBox lost focus")
 	rintLine("whats wrong");
 	});	
     b1.setSize(100,100);
