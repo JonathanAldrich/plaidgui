@@ -11,6 +11,12 @@ import melerdi.*;
 state ActionListener 
 {
 	
+	method setMultiAction(handler)
+	{
+        printLine(" the multithread action has been set");
+	   this.peer.addActionListener(plaidgui.auxiliary.multiActionListener.new(handler));
+	   	     
+	}
 	method setAction(handler)
 	{
         printLine(" the action has been set");
