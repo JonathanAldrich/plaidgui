@@ -105,14 +105,21 @@ method main() {
    b2.setMultiAction({
    	    	printLine("system is testing.....");
    	    	printLine("starting multithreading.....");
-			java.lang.Thread.sleep(5000);
+			java.lang.Thread.sleep(10000);
 			printLine("system test finishd");
+			printLine("What's wrong?");
+   });
+   b2.setMultiAction({
+   	    	printLine("system is testing11.....");
+   	    	printLine("starting multithreading11.....");
+			java.lang.Thread.sleep(5000);
+			printLine("system test11 finishd");
 			printLine("What's wrong?");
    });
    b3.setAction({
    	    	printLine("system is single threading testing.....");
    	    	printLine("starting single threading.....");
-			java.lang.Thread.sleep(5000);
+			java.lang.Thread.sleep(10000);
 			printLine("system test finishd");
 			printLine("What's wrong?");
    });

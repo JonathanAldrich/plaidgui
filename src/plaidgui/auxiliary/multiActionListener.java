@@ -18,10 +18,11 @@ public class multiActionListener implements java.awt.event.ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		new Thread() {
             public void run() {
+            	p_handler.invoke(Util.unit());  
             	SwingUtilities.invokeLater(
                         new Runnable() {
                             public void run() {
-                            	p_handler.invoke(Util.unit());  
+                            //	p_handler.invoke(Util.unit());  
                             }
                         }
                 );
