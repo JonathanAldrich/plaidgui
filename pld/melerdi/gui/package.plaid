@@ -62,6 +62,19 @@ method makeButton(name)
 	//b.setAction();
 	b;
 }
+method makeParentedButton(parent,name) 
+{
+	
+	val b= new Button 
+	{
+		 peer = javax.swing.JButton.new(name);
+	}with ActionListener with Component;
+	
+	b.setButton();
+	b.setwidgetstate();
+	parent.setParent(b);
+	b;
+}
 
 method makeLabel(name) 
 {
