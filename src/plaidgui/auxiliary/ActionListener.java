@@ -1,6 +1,9 @@
 package plaidgui.auxiliary;
 
 import java.awt.event.ActionEvent;
+
+import javax.swing.SwingUtilities;
+
 import plaid.runtime.PlaidMethod;
 import plaid.runtime.Util;
 
@@ -13,7 +16,7 @@ public class ActionListener implements java.awt.event.ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		p_handler.invoke(Util.unit());
-	}
-
+		
+		p_handler.invoke(Util.unit());  
+   }
 }

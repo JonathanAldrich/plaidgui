@@ -41,11 +41,11 @@ method main() {
 	 val b1= makeButton("hide");
 	 val p = makePanel();	
 	 val l1= makeLabel("Hi friend :");
-     val t1= makeTextBox("the Action listener in textBox when you press Enter");
-     
+     val t1= makeTextBox("the action will occur if you press Enter");
+     val b3= makeParentedButton(p,"singlethreading");
      w.setParent(p);	
     w.refresh();
-    val b2=makeParentedButton(p,"parented button");
+    val b2=makeParentedButton(p,"multithreading");
     printLine("parented*******************************************************************************");
     printLine(b2);
 	printLine("parented*******************************************************************************");
@@ -74,6 +74,7 @@ method main() {
 	printLine("*******************************************************************************");
     printLine(l1);
 	printLine("*******************************************************************************");
+  
     b.setAction({
 	    match (b1)
 		{
@@ -101,6 +102,20 @@ method main() {
 		
 		printLine("What's wrong?");
 	});
+   b2.setMultiAction({
+   	    	printLine("system is testing.....");
+   	    	printLine("starting multithreading.....");
+			java.lang.Thread.sleep(5000);
+			printLine("system test finishd");
+			printLine("What's wrong?");
+   });
+   b3.setAction({
+   	    	printLine("system is single threading testing.....");
+   	    	printLine("starting single threading.....");
+			java.lang.Thread.sleep(5000);
+			printLine("system test finishd");
+			printLine("What's wrong?");
+   });
    b1.setAction({
    	  match (b)
 	{
@@ -119,8 +134,7 @@ method main() {
 				printLine("What's wrong?");
 			}
 	};
-   	   
-   });
+ });
     p.refresh();
        w.hide();
        printLine(" the window have been hide");
@@ -140,7 +154,7 @@ method main() {
 		}
 		};	
 
-
+	w.pack();
    	java.lang.System.out.println("finish test");
 
 }

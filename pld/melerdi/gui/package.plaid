@@ -108,3 +108,8 @@ method notifyClose()
 		printLine("whats wrong!?");
 	
 }
+method test(){
+	printLine("system is testing");
+	java.lang.Thread.sleep(10000);
+	printLine("system test finishd");
+}
