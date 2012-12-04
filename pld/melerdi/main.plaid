@@ -20,20 +20,21 @@ java.lang.System.out.println("test1");
 	val p = makePanel();	
 	val l1= makeLabel("Label1 :");
 	val t1= makeTextBox("TextBox1 ");
-	val b= makeButton("Hide The Button");
-	val b1= makeButton("Disable");	
+	val b= makeButton("Disable");
+	val b1= makeButton("Hide The Button");	
 		
 		p.setParent(l1);
+		p.setParent(t1);
 		p.setParent(b);
 		p.setParent(b1);
-		p.setParent(t1);
+		
 	val b2=makeParentedButton(p,"multithreading");
 	val b3= makeParentedButton(p,"singlethreading");
 	val b4= makeParentedButton(p,"hide multithreading");
 		w.pack();
-		w.show();
+	
 
-w.setSize(400,200);
+//w.setSize(400,200);
 w.windowIconofied({
 printLine("Start Window Iconofied...");
 printLine("Window hav been iconofied");
@@ -58,9 +59,6 @@ w.refresh();
 printLine("parented*******************************************************************************");
 printLine(b2);
 printLine("parented*******************************************************************************");
-p.borderLayout();
-p.flowLayout();
-
 //w.setreParent(b1);
 t1.setAction({
 printLine(t1.getText()); 
@@ -74,10 +72,6 @@ t1.lostFocus({
 printLine(" the taxtBox lost focus")
 rintLine("whats wrong");
 });	
-b1.setSize(100,100);
-l1.setSize(50,50);
-b.setSize(300,100);
-
 printLine("*******************************************************************************");
 printLine(l1);
 printLine("*******************************************************************************");
@@ -147,7 +141,7 @@ printLine("system test finishd");
 printLine("What's wrong?");
 });
 
-b4.setSize(100,50);
+
 b4.setAction({
 b2.hide();
 b4.setText("try again to hide")
@@ -173,9 +167,8 @@ printLine("What's wrong?");
 };
 });
 p.refresh();
-w.hide();
 printLine(" the window have been hide");
-w.show();
+
 //   
 
 w.disable();
@@ -191,7 +184,7 @@ printLine(" window is in EnabledWindow state;!");
 }
 };	
 
-w.pack();
-java.lang.System.out.println("finish test");
+w.setSize(400,200);
+w.show();
 
 }
