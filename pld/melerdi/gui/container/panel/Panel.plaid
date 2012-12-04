@@ -21,6 +21,7 @@ state Panel =
 	
 		method setParent(p)
 	{
+		p.changetoUnparented();
 		this.peer.add(p.getPeer());
     	p.changeState();
     }

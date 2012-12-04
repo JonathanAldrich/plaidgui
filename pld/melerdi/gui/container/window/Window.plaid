@@ -23,6 +23,7 @@ state Window =
 	
 	method setParent(p)
 	{
+		p.changetoUnparented();
 		this.peer.add(p.getPeer());
     	p.changeState();
     }
