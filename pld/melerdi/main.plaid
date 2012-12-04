@@ -14,19 +14,32 @@ import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.container.window.windowstatus.*;
 
 method main() {
-	java.lang.System.out.println("test1");
+java.lang.System.out.println("test1");
 
-    val w = makeWindow("hi");
-   //w.pack();
-   w.show();
+	val w = makeWindow("Plaid Test Window");
+	val p = makePanel();	
+	val l1= makeLabel("Label1 :");
+	val t1= makeTextBox("TextBox1 ");
+	val b= makeButton("Hide The Button");
+	val b1= makeButton("Disable");	
+		
+		p.setParent(l1);
+		p.setParent(b);
+		p.setParent(b1);
+		p.setParent(t1);
+	val b2=makeParentedButton(p,"multithreading");
+	val b3= makeParentedButton(p,"singlethreading");
+	val b4= makeParentedButton(p,"hide multithreading");
+		w.pack();
+		w.show();
 
-    w.setSize(400,200);
-	w.windowIconofied({
-			printLine("Start Window Iconofied...");
-		    printLine("Window hav been iconofied");
-			printLine("What's wrong?");
-	   
-	});
+w.setSize(400,200);
+w.windowIconofied({
+printLine("Start Window Iconofied...");
+printLine("Window hav been iconofied");
+printLine("What's wrong?");
+
+});
 //    w.windowClosing({
 //		printLine("Start calling callback...");
 //	    notifyClose(); 
@@ -37,131 +50,148 @@ method main() {
 //w.windowIconofied();
 
 
-	 val b= makeButton("Click me");
-	 val b1= makeButton("hide");
-	 val p = makePanel();	
-	 val l1= makeLabel("Hi friend :");
-     val t1= makeTextBox("the action will occur if you press Enter");
-     val b3= makeParentedButton(p,"singlethreading");
-     w.setParent(p);	
-    w.refresh();
-    val b2=makeParentedButton(p,"multithreading");
-    printLine("parented*******************************************************************************");
-    printLine(b2);
-	printLine("parented*******************************************************************************");
-	p.borderLayout();
-	p.flowLayout();
-	p.setParent(l1);
-	p.setParent(b);
-	p.setParent(b1);
-	p.setParent(t1);
-	
-	t1.setAction({
-		 printLine(t1.getText()); 
-		 printLine("whats wrong");
-		});
-	t1.gainFocus({
-	printLine(" the taxtBox gained focus")
-	rintLine("whats wrong");
-	});	
-	t1.lostFocus({
-	printLine(" the taxtBox lost focus")
-	rintLine("whats wrong");
-	});	
-    b1.setSize(100,100);
-	l1.setSize(50,50);
-    b.setSize(300,100);
-	printLine("*******************************************************************************");
-    printLine(l1);
-	printLine("*******************************************************************************");
-  
-    b.setAction({
-	    match (b1)
-		{
-			case DisabledComponent
-			{
-				printLine("the button is Disable");
-				b1.enable();
-				b.setText("disable");
-				printLine("*******************************************************************************");
-			    printLine(b1);
-				printLine("*******************************************************************************");
-			}
-			case EnabledComponent
-			{
-				printLine("the button is Enable");
-				b1.disable();
-				b.setText("enable");
-				printLine("*******************************************************************************");
-			    printLine(b1);
-				printLine("*******************************************************************************");
-			}
-			
-	};
-		
-		
-		printLine("What's wrong?");
-	});
-   b2.setMultiAction({
-   	    	printLine("system is testing.....");
-   	    	printLine("starting multithreading.....");
-			java.lang.Thread.sleep(10000);
-			printLine("system test finishd");
-			printLine("What's wrong?");
-   });
-   b2.setMultiAction({
-   	    	printLine("system is testing11.....");
-   	    	printLine("starting multithreading11.....");
-			java.lang.Thread.sleep(5000);
-			printLine("system test11 finishd");
-			printLine("What's wrong?");
-   });
-   b3.setAction({
-   	    	printLine("system is single threading testing.....");
-   	    	printLine("starting single threading.....");
-			java.lang.Thread.sleep(10000);
-			printLine("system test finishd");
-			printLine("What's wrong?");
-   });
-   b1.setAction({
-   	  match (b)
-	{
-			case VisibleButton
-			{
-				b.hide();
-				b1.setText("show the button");
-				printLine(" the button has been disapeared");
-				printLine("What's wrong?");
-			}
-			case InvisibleButton
-			{
-				b.show();
-			    b1.setText("hide the button");
-				printLine(" the button has been apeared");
-				printLine("What's wrong?");
-			}
-	};
- });
-    p.refresh();
-       w.hide();
-       printLine(" the window have been hide");
-       w.show();
-//   
-   
-    w.disable();
-    match (w) {
-		case DisabledWindow {
-			printLine(" window is in DisabledWindow state;!");
-		}
-		};
-	w.enable();
-	match (w) {
-		case EnabledWindow {
-			printLine(" window is in EnabledWindow state;!");
-		}
-		};	
 
-	w.pack();
-   	java.lang.System.out.println("finish test");
+w.setParent(p);
+
+w.refresh();
+
+printLine("parented*******************************************************************************");
+printLine(b2);
+printLine("parented*******************************************************************************");
+p.borderLayout();
+p.flowLayout();
+
+//w.setreParent(b1);
+t1.setAction({
+printLine(t1.getText()); 
+printLine("whats wrong");
+});
+t1.gainFocus({
+printLine(" the taxtBox gained focus")
+rintLine("whats wrong");
+});	
+t1.lostFocus({
+printLine(" the taxtBox lost focus")
+rintLine("whats wrong");
+});	
+b1.setSize(100,100);
+l1.setSize(50,50);
+b.setSize(300,100);
+
+printLine("*******************************************************************************");
+printLine(l1);
+printLine("*******************************************************************************");
+
+b.setAction({
+match (b1)
+{
+case DisabledComponent
+{
+printLine("the button is Disable");
+b1.enable();
+b.setText("disable");
+printLine("*******************************************************************************");
+printLine(b1);
+printLine("*******************************************************************************");
+}
+case EnabledComponent
+{
+printLine("the button is Enable");
+b1.disable();
+b.setText("enable");
+printLine("*******************************************************************************");
+printLine(b1);
+printLine("*******************************************************************************");
+}
+
+};
+
+
+printLine("What's wrong?");
+});
+
+b2.setMultiAction({
+
+printLine("system is testing.....");
+printLine("starting multithreading.....");
+java.lang.Thread.sleep(10000);
+printLine("system test finishd");
+var time =java.util.GregorianCalendar.new();
+java.lang.System.out.println(time.get( java.util.Calendar.MINUTE).toString() + ":"+ time.get( java.util.Calendar.SECOND).toString());
+printLine("What's wrong?");
+});
+b2.setMultiAction({
+printLine("system is testing11.....");
+printLine("starting multithreading11.....");
+java.lang.Thread.sleep(5000);
+printLine("system test11 finishd");
+var time =java.util.GregorianCalendar.new(); 
+java.lang.System.out.println(time.get( java.util.Calendar.MINUTE).toString() + ":"+ time.get( java.util.Calendar.SECOND).toString());
+printLine("What's wrong?");
+});
+b2.setMultiAction({
+printLine("system is testing13.....");
+printLine("starting multithreading13.....");
+java.lang.Thread.sleep(15000);
+printLine("system test13 finishd");
+var time =java.util.GregorianCalendar.new();
+java.lang.System.out.println(time.get( java.util.Calendar.MINUTE).toString() + ":"+ time.get( java.util.Calendar.SECOND).toString());
+printLine("What's wrong?");
+});
+
+b3.setAction({
+printLine("system is single threading testing.....");
+printLine("starting single threading.....");
+java.lang.Thread.sleep(10000);
+printLine("system test finishd");
+printLine("What's wrong?");
+});
+
+b4.setSize(100,50);
+b4.setAction({
+b2.hide();
+b4.setText("try again to hide")
+printLine("What's wrong?");
+});
+b1.setAction({
+match (b)
+{
+case VisibleButton
+{
+b.hide();
+b1.setText("show the button");
+printLine(" the button has been disapeared");
+printLine("What's wrong?");
+}
+case InvisibleButton
+{
+b.show();
+b1.setText("hide the button");
+printLine(" the button has been apeared");
+printLine("What's wrong?");
+}
+};
+});
+p.refresh();
+w.hide();
+printLine(" the window have been hide");
+w.show();
+//   
+
+w.disable();
+match (w) {
+case DisabledWindow {
+printLine(" window is in DisabledWindow state;!");
+}
+};
+w.enable();
+match (w) {
+case EnabledWindow {
+printLine(" window is in EnabledWindow state;!");
+}
+};	
+
+w.pack();
+java.lang.System.out.println("finish test");
 
 }

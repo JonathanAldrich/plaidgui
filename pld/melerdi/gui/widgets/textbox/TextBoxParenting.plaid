@@ -7,5 +7,11 @@
 
 package melerdi.gui.widgets.textbox;
 
-state TextBoxParenting {}
+state TextBoxParenting 
+{
+	method changetoUnparented()
+		{
+			this<-UnparentedTextBox;
+		}
+}
  

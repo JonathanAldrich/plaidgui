@@ -7,5 +7,11 @@
 
 package melerdi.gui.container.panel;
 
-state PaneParenting {}
+state PaneParenting 
+{
+	method changetoUnparented()
+		{
+			this<-UnparentedPane;
+		}
+}
  

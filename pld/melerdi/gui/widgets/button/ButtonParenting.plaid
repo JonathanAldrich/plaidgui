@@ -7,5 +7,11 @@
 
 package melerdi.gui.widgets.button;
 
-state ButtonParenting {}
+state ButtonParenting 
+{
+	method changetoUnparented()
+		{
+			this<-UnparentedButton;
+		}	
+}
  

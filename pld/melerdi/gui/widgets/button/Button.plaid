@@ -19,4 +19,6 @@ state Button =
 		this <- VisibleButton;
 		printLine("Button's stats have been initialized");
 	}
+	
+	
 } 

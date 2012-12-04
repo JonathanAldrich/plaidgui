@@ -13,10 +13,10 @@ state UnparentedButton case of ButtonParenting
 	{
 	this <-ParentedButton;
 	}
-method getPeer() 
-	{ 
-		this.peer 
-	}
+	method getPeer() 
+		{ 
+			this.peer 
+		}
 }
 
  
