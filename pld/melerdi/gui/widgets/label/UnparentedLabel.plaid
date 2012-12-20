@@ -15,7 +15,7 @@ state UnparentedLabel case of LabelParenting
 	}
 method getPeer() 
 	{ 
-		this.peer 
+		this.peer; 
 	}
 }
 
