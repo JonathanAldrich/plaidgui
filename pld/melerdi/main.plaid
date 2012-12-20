@@ -43,6 +43,7 @@ java.lang.System.out.println("test1");
 		
 		p.setParent(l1);
 		p.setParent(t1);
+		b.setParent(b1)
 		p.setParent(b);
 		p.setParent(b1);
 		
