@@ -19,25 +19,8 @@ state UndisplyableWindow case of NewWindow
 	method pack()
 	{
 		this.peer.pack();
-		this <- VisibleWindow;
-		this <- WindowEnabling;
-		this <- EnabledWindow;
-		
-		this <- WindowStatechanged;
-		this <- Deiconofying;
-		this <- ActivatedWindow;
-		this <- DeiconofiedWindow;
-				
-		match (this) 
-	{
-		case EnabledWindow 
-		{
-			printLine(" window is in EnabledWindow state;!");
-		}
-	};
 		this <- PackedWindow;
 		this <- DefaultPosition;
-		
 		this <- HiddenWindow;
 		}
 		

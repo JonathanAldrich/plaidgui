@@ -17,6 +17,7 @@ state WindowState
 	
 	method windowIconofied(handle)
 	{
+		
 		this.peer.addWindowListener(plaidgui.auxiliary.WindowIconofiedListener.new(handle));
 	}
 	
