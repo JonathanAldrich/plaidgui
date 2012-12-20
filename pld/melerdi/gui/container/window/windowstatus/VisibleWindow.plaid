@@ -7,7 +7,10 @@
 
 package melerdi.gui.container.window.windowstatus;	
 
-state VisibleWindow case of DisplaybleWindow 
+import melerdi.gui.container.window.windowstate.*;
+
+state VisibleWindow case of DisplaybleWindow =
+ WindowStatechanged with WindowEnabling	
 
 {
  	 
