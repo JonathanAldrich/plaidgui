@@ -34,7 +34,7 @@ java.lang.System.out.println("test1");
 //			printLine(" window is in EnabledWindow state;!");
 //		}
 //	};
-	
+ 	
 	val p = makePanel();	
 	val l1= makeLabel("Label1 :");
 	val t1= makeTextBox("TextBox1 ");
@@ -43,7 +43,6 @@ java.lang.System.out.println("test1");
 		
 		p.setParent(l1);
 		p.setParent(t1);
-		b.setParent(b1)
 		p.setParent(b);
 		p.setParent(b1);
 		
@@ -187,4 +186,6 @@ java.lang.System.out.println("test1");
 
 	w.setSize(400,200);
 //	w.show();
+
+
 }
