@@ -1,0 +1,16 @@
+
+/*
+    AUTHOR: Masoud Melerdi my.melerdi@gmail.com
+   	DESC:	
+	FILE:	
+*/
+package melerdi.gui.container.window.windowstatus;
+
+state DecoratedWindow case of UndisplyableWindow
+
+{
+method undecorate()
+	{
+		this.peer.setUndecorated(true);
+	} 	
+}

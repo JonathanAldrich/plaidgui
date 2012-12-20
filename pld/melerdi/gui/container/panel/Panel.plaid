@@ -14,7 +14,7 @@ state Panel =
 	
 	method setpanel()
 	{
-        printLine(" this s the panel");
+        printLine(" this is the panel");
 		this <- UnparentedPane;
 		this <- VisiblePane;
 	}

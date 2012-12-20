@@ -17,6 +17,24 @@ method main() {
 java.lang.System.out.println("test1");
 
 	val w = makeWindow("Plaid Test Window");
+//	printLine(w);
+//	  w.disable();
+//	match (w) 
+//	{
+//		case DisabledWindow 
+//		{
+//			printLine(" window is in DisabledWindow state;!");
+//		}
+//	};
+//	w.enable();
+//	match (w) 
+//	{
+//		case EnabledWindow 
+//		{
+//			printLine(" window is in EnabledWindow state;!");
+//		}
+//	};
+	
 	val p = makePanel();	
 	val l1= makeLabel("Label1 :");
 	val t1= makeTextBox("TextBox1 ");
@@ -32,6 +50,10 @@ java.lang.System.out.println("test1");
 	val b3= makeParentedButton(p,"singlethreading");
 	val b4= makeParentedButton(p,"hide multithreading");
 		w.pack();
+        w.show();
+        
+      
+	
 	w.windowIconofied(
 	{
 		printLine("Start Window Iconofied...");
@@ -157,27 +179,11 @@ java.lang.System.out.println("test1");
 	};
 	});
 	p.refresh();
-	printLine(" the window have been hide");
 
 	//   
 
-	w.disable();
-	match (w) 
-	{
-		case DisabledWindow 
-		{
-			printLine(" window is in DisabledWindow state;!");
-		}
-	};
-	w.enable();
-	match (w) 
-	{
-		case EnabledWindow 
-		{
-			printLine(" window is in EnabledWindow state;!");
-		}
-	};	
+		
 
 	w.setSize(400,200);
-	w.show();
+//	w.show();
 }

@@ -11,14 +11,14 @@ import melerdi.gui.container.window.windowstatus.*;
 import melerdi.gui.container.window.windowbound.*;
 
 state Window = 
-	NewWindow with BoundedWindow with WindowEnabling
+	NewWindow with BoundedWindow 
 {
 	method setupPeer()
 	{
-	    this <- UndisplyableWindow;
+	    this <- DecoratedWindow;
 		this <- UnsizedWindow;
 		this <- UnpositionedWindow;
-		this <- EnabledWindow;
+		
 	}
 	
 	method setParent(p)

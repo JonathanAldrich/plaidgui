@@ -20,30 +20,48 @@ state UndisplyableWindow case of NewWindow
 	{
 		this.peer.pack();
 		this <- VisibleWindow;
+		this <- WindowEnabling;
+		this <- EnabledWindow;
+		
 		this <- WindowStatechanged;
 		this <- Deiconofying;
 		this <- ActivatedWindow;
 		this <- DeiconofiedWindow;
+				
+		match (this) 
+	{
+		case EnabledWindow 
+		{
+			printLine(" window is in EnabledWindow state;!");
+		}
+	};
 		this <- PackedWindow;
 		this <- DefaultPosition;
 		
 		this <- HiddenWindow;
 		}
+		
 	method show()
 	{
 		this.peer.pack();
 		this.peer.setVisible(true);
 		
+		this <- WindowEnabling;
+		this <- EnabledWindow;
+		
 		this <- VisibleWindow;
+				
 		this <- WindowStatechanged;
 		this <- Deiconofying;
 		this <- ActivatedWindow;
 		this <- DeiconofiedWindow;
+		
+		
+		
 		this <- PackedWindow;
 		this <- DefaultPosition;
+		
+		
 	} 
-	method decorate(bool)
-	{
-		this.peer.setUndecorated(bool);
-	}   
+	
 }
