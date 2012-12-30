@@ -29,8 +29,8 @@ state UndisplyableWindow case of NewWindow
 		this.peer.pack();
 		this.peer.setVisible(true);
 		
-		this <- WindowEnabling;
-		this <- EnabledWindow;
+		//this <- WindowEnabling;
+		//this <- EnabledWindow;
 		
 		this <- VisibleWindow;
 				

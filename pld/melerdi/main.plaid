@@ -14,10 +14,9 @@ import melerdi.gui.container.window.windowstate.*;
 import melerdi.gui.container.window.windowstatus.*;
 
 method main() {
-java.lang.System.out.println("test1");
-
-	val w = makeWindow("Plaid Test Window");
-//	printLine(w);
+      
+       // w.setParent(w);
+ //	printLine(w);
 //	  w.disable();
 //	match (w) 
 //	{
@@ -35,6 +34,7 @@ java.lang.System.out.println("test1");
 //		}
 //	};
  	
+	val w=makeWindow("Test Plaid");
 	val p = makePanel();	
 	val l1= makeLabel("Label1 :");
 	val t1= makeTextBox("TextBox1 ");
