@@ -26,6 +26,7 @@ state Window =
 		p.changetoUnparented();
 		this.peer.add(p.getPeer());
     	p.changeState();
+    	this.refresh();
     }
 
 	method refresh()
@@ -34,10 +35,7 @@ state Window =
 		this.peer.validate();
 	}
 	
-	method getPeer(){
-		this.peer
-	}
-	   
+		   
 }
 
 	 

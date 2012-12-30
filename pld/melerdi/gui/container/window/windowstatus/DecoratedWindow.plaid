@@ -12,5 +12,6 @@ state DecoratedWindow case of UndisplyableWindow
 method undecorate()
 	{
 		this.peer.setUndecorated(true);
+		this <- UndecoratedWindow;
 	} 	
 }

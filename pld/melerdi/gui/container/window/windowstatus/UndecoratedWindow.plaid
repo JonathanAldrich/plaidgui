@@ -10,8 +10,12 @@ package melerdi.gui.container.window.windowstatus;
 state UndecoratedWindow case of UndisplyableWindow
 
 {
-method decorate()
-	{
-		this.peer.setUndecorated(false);
-	} 	
+	method decorate()
+		{
+			this.peer.setUndecorated(false);
+			this<-DecoratedWindow;
+		} 	
+	method setOpacity(opacity){
+			this.peer.setOpacity(opacity);
+		}
 }
